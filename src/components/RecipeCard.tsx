@@ -1,28 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Recipe } from '@/lib/api'
 
 interface RecipeCardProps {
-  title: string
-  slug: string
-  image: string
-  description: string
+  recipe: Recipe & { slug: string }
 }
 
-export default function RecipeCard({ title, slug, image, description }: RecipeCardProps) {
+export default function RecipeCard({ recipe }: RecipeCardProps) {
   return (
-    <Link href={`/recipes/${slug}`} className="block">
+    <Link href={`/recipes/${recipe.slug}`} className="block">
       <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
         <div className="relative h-48">
           <Image
-            src={image}
-            alt={title}
+            src={recipe.imageUrl}
+            alt={recipe.title}
             fill
             className="object-cover"
           />
         </div>
         <div className="p-4">
-          <h2 className="text-xl font-semibold mb-2">{title}</h2>
-          <p className="text-gray-600">{description}</p>
+          <h2 className="text-xl font-semibold mb-2">{recipe.title}</h2>
+          <p className="text-gray-600">{recipe.description}</p>
         </div>
       </div>
     </Link>

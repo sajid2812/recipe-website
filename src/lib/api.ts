@@ -1,4 +1,4 @@
-type Recipe = {
+export type Recipe = {
   title: string;
   description: string;
   imageUrl: string;
@@ -8,8 +8,22 @@ type Recipe = {
 
 export async function fetchRecipes() {
   return [
-    { slug: "chocolate-cake", title: "Chocolate Cake" },
-    { slug: "pasta-carbonara", title: "Pasta Carbonara" },
+    {
+      slug: "chocolate-cake",
+      title: "Chocolate Cake",
+      description: "A rich and moist chocolate cake.",
+      imageUrl: "/images/chocolate-cake.jpg",
+      ingredients: ["Flour", "Sugar", "Cocoa powder", "Eggs", "Milk"],
+      steps: ["Preheat oven...", "Mix ingredients...", "Bake for 30 minutes."],
+    },
+    {
+      slug: "pasta-carbonara",
+      title: "Pasta Carbonara",
+      description: "Creamy and delicious Italian classic.",
+      imageUrl: "/images/pasta-carbonara.jpg",
+      ingredients: ["Pasta", "Eggs", "Parmesan", "Pancetta", "Black pepper"],
+      steps: ["Boil pasta...", "Fry pancetta...", "Mix all together."],
+    },
   ];
 }
 
