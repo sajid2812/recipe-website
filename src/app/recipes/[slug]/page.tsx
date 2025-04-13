@@ -23,39 +23,43 @@ export default async function RecipePage({
     );
 
   return (
-    <main className="max-w-3xl mx-auto p-4 text-black">
-      <h1 className="text-3xl font-bold mb-4 text-center">{recipe.title}</h1>
-      <div className="flex justify-center">
-        <Image
-          src={recipe.imageUrl}
-          alt={recipe.title}
-          width={400}
-          height={200}
-          className="object-cover rounded-2xl"
-          priority
-        />
-      </div>
-      <section className="mt-6">
-        <h2 className="text-xl font-semibold text-center mb-3">Ingredients:</h2>
-        <div className="flex flex-wrap gap-2">
-          {recipe.ingredients.map((item, i) => (
-            <div 
-              key={i}
-              className="px-3 py-1.5 bg-gray-100 rounded-lg text-sm"
-            >
-              {item}
-            </div>
-          ))}
+    <main className="max-w-6xl mx-auto p-4 text-black">
+      <h1 className="text-3xl font-bold mb-8 text-center">{recipe.title}</h1>
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="md:w-1/2">
+          <Image
+            src={recipe.imageUrl}
+            alt={recipe.title}
+            width={600}
+            height={400}
+            className="object-cover rounded-2xl w-full"
+            priority
+          />
         </div>
-      </section>
-      <section className="mt-6">
-        <h2 className="text-xl font-semibold text-center mb-3">Steps:</h2>
-        <ol className="list-decimal pl-5">
-          {recipe.steps.map((step, i) => (
-            <li key={i} className="mb-2">{step}</li>
-          ))}
-        </ol>
-      </section>
+        <div className="md:w-1/2">
+          <section>
+            <h2 className="text-xl font-semibold mb-3">Ingredients:</h2>
+            <div className="flex flex-wrap gap-2">
+              {recipe.ingredients.map((item, i) => (
+                <div 
+                  key={i}
+                  className="px-3 py-1.5 bg-gray-100 rounded-lg text-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="mt-6">
+            <h2 className="text-xl font-semibold mb-3">Steps:</h2>
+            <ol className="list-decimal pl-5">
+              {recipe.steps.map((step, i) => (
+                <li key={i} className="mb-2">{step}</li>
+              ))}
+            </ol>
+          </section>
+        </div>
+      </div>
     </main>
   );
 }

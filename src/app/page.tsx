@@ -16,7 +16,7 @@ export default async function HomePage() {
           </p>
         </section>
         <section className="mb-24">
-          <h2 className="text-3xl font-weight-[500] bg-clip-text text-transparent bg-gradient-to-r from-[#ff00ac] to-[#ffe207] mb-8 text-center">
+          <h2 className="text-3xl font-weight-[600] bg-clip-text text-transparent bg-gradient-to-r from-[#348756] to-[#54B6CA] mb-8 text-center">
             Featured Recipes
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
