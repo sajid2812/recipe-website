@@ -19,7 +19,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           />
         </div>
         <div className="p-4">
-          <h2 className="text-xl font-semibold mb-2">{recipe.title}</h2>
+          <h2 className="text-xl text-black font-semibold mb-2">{recipe.title}</h2>
           <p className="text-gray-600">{recipe.description}</p>
         </div>
       </div>

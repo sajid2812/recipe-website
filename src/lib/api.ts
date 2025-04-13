@@ -24,6 +24,33 @@ export async function fetchRecipes() {
       ingredients: ["Pasta", "Eggs", "Parmesan", "Pancetta", "Black pepper"],
       steps: ["Boil pasta...", "Fry pancetta...", "Mix all together."],
     },
+    {
+      slug: "butter-chicken",
+      title: "Butter Chicken",
+      description: "A rich and creamy North Indian curry.",
+      imageUrl: "/images/butter-chicken.jpg",
+      ingredients: [
+        "500g boneless chicken",
+        "200g yogurt",
+        "2 tbsp butter",
+        "4 tomatoes, pureed",
+        "2 tsp garam masala",
+        "1 tsp cumin powder",
+        "1 tsp chili powder",
+        "1 tbsp ginger garlic paste",
+        "Salt to taste",
+        "Fresh cream for garnish",
+      ],
+      steps: [
+        "Marinate chicken with yogurt, salt, chili powder, and garam masala for at least 1 hour.",
+        "Grill or pan-fry the marinated chicken until cooked through and slightly charred.",
+        "In a pan, melt butter and sauté ginger garlic paste until fragrant.",
+        "Add pureed tomatoes, spices (garam masala, cumin, salt) and simmer until thickened.",
+        "Add cooked chicken pieces to the sauce and simmer for 10-15 minutes.",
+        "Stir in fresh cream and adjust seasoning.",
+        "Garnish with cream and fresh coriander before serving.",
+      ],
+    },
   ];
 }
 
@@ -42,6 +69,32 @@ export async function fetchRecipeBySlug(slug: string) {
       imageUrl: "/images/pasta-carbonara.jpg",
       ingredients: ["Pasta", "Eggs", "Parmesan", "Pancetta", "Black pepper"],
       steps: ["Boil pasta...", "Fry pancetta...", "Mix all together."],
+    },
+    "butter-chicken": {
+      title: "Butter Chicken",
+      description: "A rich and creamy North Indian curry.",
+      imageUrl: "/images/butter-chicken.jpg",
+      ingredients: [
+        "500g boneless chicken",
+        "200g yogurt",
+        "2 tbsp butter",
+        "4 tomatoes, pureed",
+        "2 tsp garam masala",
+        "1 tsp cumin powder",
+        "1 tsp chili powder",
+        "1 tbsp ginger garlic paste",
+        "Salt to taste",
+        "Fresh cream for garnish",
+      ],
+      steps: [
+        "Marinate chicken with yogurt, salt, chili powder, and garam masala for at least 1 hour.",
+        "Grill or pan-fry the marinated chicken until cooked through and slightly charred.",
+        "In a pan, melt butter and sauté ginger garlic paste until fragrant.",
+        "Add pureed tomatoes, spices (garam masala, cumin, salt) and simmer until thickened.",
+        "Add cooked chicken pieces to the sauce and simmer for 10-15 minutes.",
+        "Stir in fresh cream and adjust seasoning.",
+        "Garnish with cream and fresh coriander before serving.",
+      ],
     },
   };
   return recipes[slug];
